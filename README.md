@@ -4,6 +4,7 @@ Tercera pre-entrega - Curso Python - comision 48265
 Pasos para ejecutar el proyecto (tercera pre-entrega):
 
 1.- Clonar el proyecto en el directorio deseado;
+
 2.- Dentro de la carpeta del proyecto, instalamos un entorno virutal, llamamos al administrador de paquetes y con el comando: "pip install vitualenv"
 3.- Activamos el entorno virtual;
 4.- En caso de no tener el framework "Django" instalado, lo hacemos utilizando el administrador de paquetes "pip": "pip install django";
