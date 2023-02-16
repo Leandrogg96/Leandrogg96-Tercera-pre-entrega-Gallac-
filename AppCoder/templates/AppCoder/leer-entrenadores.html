@@ -1,0 +1,40 @@
+{% extends 'AppCoder/padre.html' %}
+
+{% block content %}
+
+<h1> Contenido de los entreandores </h1>
+<p> Informacion de sobre los entrenadores</p>
+
+<section class="mt-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <!--Aquí va lo que cambia, y lo asociado a está vista :) -->
+                <h1>Entrenadores</h1>
+                <p> 
+                    <ul>
+                        {% for entrenador in entrenadores %}
+                        <li> {{ entrenador }} - <a href= "{% url  'EliminarEntrenador' entrenador.nombre %}"> Eliminar</a></li> 
+                        {% endfor %}    
+                    </ul>
+                </p>
+                <p>Acá va la info de los entrenadores</p>
+
+                {% if mi_formulario %}
+
+                    <hr> 
+                    <form action="" method="POST">
+
+                        {{ mi_formulario.as_p }}
+                        <input type="submit" value="Eliminar">
+                    </form>
+
+                {% endif %}
+
+            </div>
+        </div>
+    </div>
+</section>
+<
+
+{% endblock %}

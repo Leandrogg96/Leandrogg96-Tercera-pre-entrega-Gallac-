@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Busca el jugador que desees:</title>
+</head>
+<body>
+    <h3>Busca el jugador que desees:</h3>
+    <p>Ingresá el apellido:</p>
+    </p>
+    <form action="{% url 'buscar-jugador' %}" method="GET">
+        {% csrf_token %}
+
+            <input type="string" name="apellido" id="apellido"> 
+            <input type="submit" value="Buscar">
+
+    </form>
+</body>
+</html>

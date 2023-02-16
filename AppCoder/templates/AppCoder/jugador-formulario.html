@@ -1,0 +1,29 @@
+{% extends 'AppCoder/padre.html' %}
+
+{% block content %}
+
+<section class="features-icons bg-light">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                
+                {% if formulario_jugador.errors %}
+                   <p style="color: red;"> Por favor llene el formulario correctamente </p>
+                {% endif %}
+
+                <form action="{% url 'jugador-formulario' %}" method='POST'>
+                    
+                  
+                    <table>
+                        {{ formulario_jugador.as_table }}
+                    </table>
+
+                    <input type="submit" value="Enviar">
+
+                </form>
+            </div>    
+        </div>
+    </div>
+</section>
+
+{% endblock %}

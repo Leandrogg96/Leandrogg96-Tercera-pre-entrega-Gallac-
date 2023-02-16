@@ -1,0 +1,39 @@
+{% extends 'AppCoder/padre.html' %}
+
+{% block title %}
+
+<h1> Contenido de los entrenadores </h1>
+<p> Informacion de sobre los entrenadores </p>
+
+{% endblock %}
+
+
+{% block content %}
+
+<section class="features-icons bg-light">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                
+                {% if formulario_entrenador.errors %}
+                    <p > Por favor llene el formulario correctamente </p>
+                {% endif %}
+
+                <form action="{% url 'entrenador-formulario' %}" method="POST">
+                    
+                    {% csrf_token %}
+                    
+                    <table>
+                        {{ formulario_entrenador.as_table }}
+                    </table>
+
+                    <input type="submit" value="Enviar">
+
+                </form>
+            </div>    
+        </div>
+    </div>
+</section>
+
+
+{% endblock %}
