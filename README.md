@@ -6,10 +6,15 @@ Pasos para ejecutar el proyecto (tercera pre-entrega):
 1.- Clonar el proyecto en el directorio deseado;
 
 2.- Dentro de la carpeta del proyecto, instalamos un entorno virutal, llamamos al administrador de paquetes y con el comando: "pip install vitualenv"
+
 3.- Activamos el entorno virtual;
+
 4.- En caso de no tener el framework "Django" instalado, lo hacemos utilizando el administrador de paquetes "pip": "pip install django";
+
 5.- Realizamos la migraciones que son requeridas con el comando: "python manage.py migrate";
+
 6.- Ejecutamos el servidor con el comando: "python manage.py runserver".
+
 
   Mi idea de este tercer proyecto es hacer un base de datos para un torneo de fútbol, donde se puedan registrar los equipos que vayan a participar,
 el entrenador de cada equipo, los jugadores y hasta los arbitros que vayan a participar. Con esta aplicación logro recaudar toda la información, detallada de datos de mi interés,
